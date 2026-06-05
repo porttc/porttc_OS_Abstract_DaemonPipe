@@ -1,17 +1,11 @@
 package porttcOSSocket
 
 import (
-	//"context"
-	//"fmt"
 	"context"
 	"fmt"
 	"net"
 	"net/http"
 	"time"
-
-	//"runtime"
-	//"time"
-	"sync"
 )
 
 type PorttcHTTPServer struct {

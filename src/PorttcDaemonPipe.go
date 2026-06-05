@@ -1,10 +1,12 @@
+//go:build windows
+
 package porttcOSSocket
 
 import (
 	"fmt"
 	"net/http"
 
-	winio "github.com/microsoft/go-winio"
+	winio "github.com/Microsoft/go-winio"
 )
 
 func (s *PorttcHTTPServer) startPipeListener(pipePath string) error {

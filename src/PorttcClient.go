@@ -2,12 +2,8 @@ package porttcOSSocket
 
 
 import (
-    "context"
-    "fmt"
-    "net"
-    "net/http"
-    "runtime"
-    "time"
+	"net"
+	"net/http"
 )
 
 type PorttcHTTPClient struct {

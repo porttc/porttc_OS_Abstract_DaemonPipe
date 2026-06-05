@@ -1,4 +1,4 @@
-BUILDNAME=porttc
+BUILDNAME=porttcOSABSTR
 
 .PHONY: all build buildRun fmtAll clean testing release deploy
 
