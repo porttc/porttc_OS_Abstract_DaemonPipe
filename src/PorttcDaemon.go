@@ -25,7 +25,7 @@ type PorttcHTTPServerConfig struct {
 	Protocol string
 
 	//external listener info
-	ExternalPort     int
+	ExternalPort int
 
 	//loopback adapter info
 	LoopbackPort int
@@ -45,7 +45,7 @@ func (s *PorttcHTTPServer) Start(config PorttcHTTPServerConfig) error {
 	//windows
 	case "Pipe":
 		return s.startPipeListener(config.PipeName)
-	
+
 	//unix + win 10 supported by unix sockets
 	case "Unix":
 		return s.startUnixListener(config.UnixSockName, 0600)
@@ -53,17 +53,17 @@ func (s *PorttcHTTPServer) Start(config PorttcHTTPServerConfig) error {
 	//platform independant options
 	case "Loopback":
 		return s.startLoopbackListener(config.LoopbackPort)
-	case "Extrnal":
+	case "External":
 		return s.startExternalListener(config.ExternalPort)
 	case "InternalPipe":
 		var handleName string
-		if (config.PipeName != ""){
-			handleName = config.PipeName 
+		if config.PipeName != "" {
+			handleName = config.PipeName
 		} else {
 			handleName = config.UnixSockName
 		}
 		return s.startInternalPipeListener(handleName)
-	
+
 	default:
 		return fmt.Errorf("PorttcDaemon.go Start() invalid server listener type")
 	}

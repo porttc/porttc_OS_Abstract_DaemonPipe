@@ -3,8 +3,8 @@ package porttcOSSocket
 import (
 	"fmt"
 	"net"
-	"strconv"
 	"net/http"
+	"strconv"
 )
 
 func (s *PorttcHTTPServer) startLoopbackListener(port int) error {

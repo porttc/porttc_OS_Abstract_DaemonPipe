@@ -19,6 +19,9 @@ buildRun: clean build
 	chmod +x ./build/$(BUILDNAME)
 	./build/$(BUILDNAME)
 
+test:
+	go test ./src/ -v
+
 fmtAll:
 	go fmt ./src/*
 

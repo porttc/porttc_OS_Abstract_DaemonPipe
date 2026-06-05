@@ -2,9 +2,9 @@ package porttcOSSocket
 
 import (
 	"fmt"
-	"strconv"
 	"net"
 	"net/http"
+	"strconv"
 )
 
 func (s *PorttcHTTPServer) startExternalListener(port int) error {
