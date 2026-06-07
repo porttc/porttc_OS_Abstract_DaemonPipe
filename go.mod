@@ -1,5 +1,4 @@
-module porttc
-
+module github.com/porttc/porttc_OS_Abstract_DaemonPipe
 go 1.26.2
 
 require github.com/Microsoft/go-winio v0.6.2
