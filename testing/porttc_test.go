@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"testing"
 
-	porttc "porttc/src"
+	porttc "github.com/porttc/porttc_OS_Abstract_DaemonPipe"
 )
 
 // startServer starts a server with the given config, registers a /ping handler,
