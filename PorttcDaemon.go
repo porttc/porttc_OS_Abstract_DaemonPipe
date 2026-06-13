@@ -38,7 +38,9 @@ type PorttcHTTPServerConfig struct {
 }
 
 func (s *PorttcHTTPServer) Start(config PorttcHTTPServerConfig) error {
-	s.Mux = http.NewServeMux()
+	if s.Mux == nil {
+		return fmt.Errorf("server is not initialized")
+	}
 
 	switch config.Protocol {
 
